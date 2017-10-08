@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="description" content="kontakt do agencji">
+        <meta name="keywords" content="kontakt, strony WWW, agencja interaktywna, projektowanie WWW">
+        <meta name="author" content="Tomasz Mosur">
+		<title>Kontakt</title>
+	</head>
+	<body>
+        <h1>Agencja interaktywna - Seales</h1> 
+        <a href="index.html" ><img src="www-slide.png" alt="Agencja interaktywna slide" /></a>
+        <h2>Nasze siedziby</h2>
+         <ol>
+              <li>Wrocław
+                <ol>
+                    <li>Kasprowicza 5</li>
+                    <li>Długosza 15</li>
+                </ol>
+             </li>
+             <li>Kraków
+                 <ol>
+                    <li>Basztowa 5</li>
+                 </ol>
+             </li>
+        </ol>
+        
+        <h2>Formularz kontaktowy:</h2>
+    <form>
+        <fieldset>
+        <h4>Dane kontaktowe:</h4>
+        Imię: <br>
+            <input type="text" name="firstname"><br>
+        Nazwisko: <br>
+            <input type="text" name="lastname"><br>
+        </fieldset>
+        <fieldset>
+<h4>Powód kontaktu:</h4>
+    <input type="radio" name="type" value="question"> Pytanie <br>
+    <input type="radio" name="type" value="offer" checked> Oferta <br>
+    <input type="radio" name="type" value="complaint"> Reklamacja <br>
+        </fieldset>
+    <fieldset>
+    <h4>Dni tygodnia do kontaktu</h4>
+    <input type="checkbox" name="day" value="monday">Poniedziałek<br>
+    <input type="checkbox" name="day" value="Tuesday">Wtorek<br>
+    <input type="checkbox" name="day" value="Wednesday">Środa<br>
+    <input type="checkbox" name="day" value="Thursday">Czwartek<br>
+    <input type="checkbox" name="day" value="Friday">Piątek<br>
+    </fieldset>
+    
+    <h4>Jakim jeździsz samochodem?</h4>
+<select>
+  <optgroup label="Szwedzkie samochody">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+  </optgroup>
+  <optgroup label="Niemieckie samochody">
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+        <optgroup label="PRL">
+    <option value="mercedes">Maluch</option>
+    <option value="audi">Duży Fiat</option>
+  </optgroup>
+</select>
+<h4>Treść wiadomości:</h4>
+ <textarea maxlength="200" rows="10" cols="50">
+...
+</textarea> <br>
+    <button type="submit" value="Submit">Submit</button>
+    <button type="reset" value="Reset">Reset</button>
+    </form>
+        <h3>Prawa autorskie:</h3>
+         	Copyright &#169; 2017 by Tomasz Mosur;
+	</body>
+</html>
