@@ -1,0 +1,41 @@
+#static-example
+{
+		background-color: rgba(0,0,255,0.5);
+		-webkit-column-count: 5; 
+		column-count: 5;
+		-webkit-column-gap: 10px;
+		column-gap: 10px;
+		-webkit-column-rule: 4px outset blue;
+		column-rule: 4px outset blue;
+		margin: 20px;		
+}
+
+@media all and (max-width: 1200px)
+{
+	div
+	{
+		background-color: rgba(255,0,0,0.1); 
+		-webkit-column-count: 2;  
+		column-count: 2; 
+		/*we create a threecolumn layout by setting the column-count property to 3*/
+		-webkit-column-gap: 25px;
+		column-gap: 25px; /*he columngap property (the spacing between columns) to 30px*/
+		-webkit-column-rule: 2px solid black;
+		column-rule: 2px outset black;  
+		/* We then add a thin black line between each column using the column-rule */
+	}
+}
+
+@media all and (min-width: 1201px)
+{
+	div
+	{
+		background-color: rgba(0,255,0,0.1);
+		-webkit-column-count: 3; 
+		column-count: 3;
+		-webkit-column-gap: 25px;
+		column-gap: 25px;
+		-webkit-column-rule: 3px dotted black;
+		column-rule: 3px dotted black;
+	}
+}
