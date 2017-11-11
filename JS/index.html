@@ -4,11 +4,32 @@
  <!-- Alert dialog displaying multiple lines. -->
  <html>
  <head>
- <meta charset = "utf-8">
- <script src="scripts.js"></script>      
- <title>Generate amazing things app</title>
+     <link rel="stylesheet" href="style.css" type="text/css" />
+     <meta charset = "utf-8">
+     <script src="scripts.js"></script>      
+     <title>Generate amazing things app</title>
  </head>
  <body>
-<script type="text/javascript">start();</script>
+     <header><script>writeToTest();</script></header>
+     <div class="flex-container">
+         <div class="flex-item breakLine" id="item-type"><h2>Item Type</h2></div>
+        <div class="flex-item " id="item-No"><h2>Item Number:</h2></div>
+        <div class="flex-item breakLine"><h2>Select Item No: </h2><input id="itemNoB" type="button" value="Select"></h2></div>
+        <div class="flex-item">
+             <h2>Generate Random Item</h2>
+             <input id="randIt" type="button" value="Generate">
+         </div>
+         
+         <div class="flex-item">
+             <h2>Generate Next</h2>
+             <input id="nextIt" type="button" value="Generate">
+         </div>
+         
+         <div class="flex-item" id="content">
+         </div>
+     </div>
+     <div id="decription"></div>
+     <footer>Copyright by Tomasz Mosur 2017</footer>
+     <script>start();</script>
  </body>
  </html>
