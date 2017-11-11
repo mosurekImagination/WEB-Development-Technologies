@@ -246,7 +246,18 @@ body
     body{
         background-color: coral;
     }
+	.box span
+{
+font-size:40px;
+}
     .flex-item {
     flex:2 50%;
+}
+}
+
+@media all and (max-width: 500px) {
+	.box span
+{
+font-size:10px;
 }
 }
