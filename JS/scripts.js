@@ -18,6 +18,7 @@ function initializeListeners()
     document.getElementById("itemNoB").addEventListener("click", selectItem);
 	document.getElementById("whileButton").addEventListener("click", whileExample);
 	document.getElementById("forButton").addEventListener("click", forExample);
+    document.getElementById("item-type").addEventListener("click", changeType);
 	clockButton.addEventListener("click",changeTimeDate);
 	
 }
@@ -46,6 +47,16 @@ function start()
 }
 
 
+function changeType()
+{
+    if(itemType == itemsType.length - 1) itemType=0;
+    else{
+        itemType++;
+    }
+    itemNo = 0;
+    showRandType();
+    showItem();
+}
 function showRandType()
 {
     document.getElementById("item-type").innerHTML="<h2>Current Item Type: " + itemsType[itemType] + "</h2>";
