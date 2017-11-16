@@ -106,21 +106,23 @@ function selectItem()
 
 function whileExample()
 {
-	var howMany = window.prompt("You cannot escape until you anser how much is 2+2");
-	while (howMany!=4)
+    var first = Math.floor(Math.random() * 100);
+    var second = Math.floor(Math.random() * 100);
+	var howMany = window.prompt("You cannot escape until you anser how much is: " + first + " + " + second);
+	while (howMany!=first + second)
 	{
-		howMany=window.prompt("You cannot escape until you anser how much is 2+2");
+		howMany=window.prompt("You cannot escape until you anser how much is: " + first + " + " + second);
 	}
 	window.alert("Congratulations!")
 }
 
 function forExample()
 {
-	var howMany = window.prompt("How many numbers do you want to add?:");
+	var howMany = window.prompt("How many numbers do you want to add?: ");
 	var result=0.0;
 	for(i=0;i<howMany;i++)
 	{
-		var doubleType = parseFloat(window.prompt("Type:"+i+"number"));
+		var doubleType = parseFloat(window.prompt("Type " + i + " number: "));
 		result= result + doubleType;
 	}
 	window.alert("Your result= "+ result)
