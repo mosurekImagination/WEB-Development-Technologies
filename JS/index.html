@@ -11,24 +11,38 @@
  </head>
  <body>
      <header><script>writeToTest();</script></header>
-     <div class="flex-container">
-         <div class="flex-item breakLine" id="item-type"><h2>Item Type</h2></div>
-        <div class="flex-item " id="item-No"><h2>Item Number:</h2></div>
-        <div class="flex-item breakLine"><h2>Select Item No: </h2><input id="itemNoB" type="button" value="Select"></h2></div>
-        <div class="flex-item">
-             <h2>Generate Random Item</h2>
-             <input id="randIt" type="button" value="Generate">
-         </div>
+		
+	<div class="flex-container">
+		<div class="flex-item" id="clock"><h2>DATE</h2>
+			<input id="clockButton" type = "button" value = "Date">
+		</div>
+		<div class="flex-item breakLine" id="item-type"><h2>Item Type</h2></div>
+		<div class="flex-item " id="item-No"><h2>Item Number:</h2></div>
+		<div class="flex-item breakLine"><h2>Select Item No: </h2><input id="itemNoB" type="button" value="Select"></div>
+		<div class="flex-item">
+			 <h2>Generate Random Item</h2>
+			 <input id="randIt" type="button" value="Generate">
+		 </div>
          
          <div class="flex-item">
              <h2>Generate Next</h2>
              <input id="nextIt" type="button" value="Generate">
          </div>
          
-         <div class="flex-item" id="content">
-         </div>
-     </div>
-     <div id="decription"></div>
+         <div class="flex-item breakLine" id="content"></div>
+		 
+	</div>
+		<div class="loop-container">
+			<div class="flex-item"> 
+				<h4>While example</h4>
+				<input type="button" value="While" id="whileButton">
+			</div>
+			<div class="flex-item">
+				<h4>For example</h4>
+				<input type="button" value="For" id="forButton">
+			</div>
+		</div>
+     
      <footer>Copyright by Tomasz Mosur 2017</footer>
      <script>start();</script>
  </body>

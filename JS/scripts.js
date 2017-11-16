@@ -1,5 +1,6 @@
 var itemType = 0;
 var itemNo = 0;
+var clockState = 0;
 const ammountOfItems = [5, 2, 7];
 const itemsType = ["Image", "Video", "Gif"];
 
@@ -11,10 +12,30 @@ function writeToTest()
 
 function initializeListeners()
 {
+	var clockButton = document.getElementById("clockButton");
     document.getElementById("randIt").addEventListener("click", randomButtonListener);
     document.getElementById("nextIt").addEventListener("click", nextButtonListener);
     document.getElementById("itemNoB").addEventListener("click", selectItem);
+	document.getElementById("whileButton").addEventListener("click", whileExample);
+	document.getElementById("forButton").addEventListener("click", forExample);
+	clockButton.addEventListener("click",changeTimeDate);
+	
 }
+
+function changeTimeDate()
+{
+	var date = new Date();
+	var day = date.getDate();
+	var month = date.getMonth()+1;
+	var yearString = window.prompt("Type the actual year and some text to it:");
+	var year = parseInt(yearString);
+	if(year!=2017) { window.alert("You typed wrong year!")}
+	else{
+		document.getElementById("clock").innerHTML =
+		"<h2> DATE: "+day+"/"+month+"/"+year+"</h2>";
+	}
+}
+
 
 function start()
 {
@@ -23,6 +44,7 @@ function start()
     showRandType();
     showItem();
 }
+
 
 function showRandType()
 {
@@ -75,9 +97,33 @@ function nextButtonListener()
 function selectItem()
 {
     var itemNumber = window.prompt("Please select item: \n range: 0-" + ammountOfItems[itemType]);
-    if(itemNumber<0 || itemNumber > ammountOfItems[itemsType]) window.alert("Out of Bounds!");
+    if(itemNumber<0 || itemNumber > ammountOfItems[itemType]) window.alert("Out of Bounds!");
     else{
         itemNo = itemNumber;
     }
     showItem();
 }
+
+function whileExample()
+{
+	var howMany = window.prompt("You cannot escape until you anser how much is 2+2");
+	while (howMany!=4)
+	{
+		howMany=window.prompt("You cannot escape until you anser how much is 2+2");
+	}
+	window.alert("Congratulations!")
+}
+
+function forExample()
+{
+	var howMany = window.prompt("How many numbers do you want to add?:");
+	var result=0.0;
+	for(i=0;i<howMany;i++)
+	{
+		var doubleType = parseFloat(window.prompt("Type:"+i+"number"));
+		result= result + doubleType;
+	}
+	window.alert("Your result= "+ result)
+}
+
+
