@@ -1,6 +1,6 @@
 //zadanie1 DONE
 
-
+var imagesList = document.images;
 function useFunctionExample()
 {
     var p = document.createElement("p");
@@ -34,10 +34,16 @@ function useFunctionExample()
     
 }
 
+function collectionExample()
+{
+    var imagesList = document.images;
+}
+
 function start()
 {
 	initializeListeners();
     useFunctionExample();
+    collectionExample();
 }
 
 function initializeListeners()

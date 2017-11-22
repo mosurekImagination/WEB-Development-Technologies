@@ -1,3 +1,8 @@
+.img-container > img
+{
+    height: 100px;
+}
+
 header{
     text-align: center;
     font-size: 2em;
@@ -39,6 +44,11 @@ header{
 	order: 1; 
     background-color: bisque;
     height: auto;
+}
+
+#content > img 
+{
+    height: 600px;
 }
 
 header h1
