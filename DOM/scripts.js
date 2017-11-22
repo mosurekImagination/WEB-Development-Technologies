@@ -50,6 +50,9 @@ function checkBoxListener()
         textP.appendChild( text);
         textP.style="text-align:center;";
         document.getElementById("DOM FORM").appendChild(textP);
+    
+        var para = document.createElement("p");
+        document.getElementById("DOM FORM").appendChild(document.anchors.item(0));
 }
 function changePhoto()
 {
@@ -58,12 +61,10 @@ function changePhoto()
     if(imagesList.length > 1 )
         {
             newImage = imagesList.item(imagesList.length-1);
-           // alert(imagesList.length);
         }
     else
         {
-            alert(document.links.length);
-            newImage = document.links.amedItem("koniecObrazkow");
+            newImage = document.links.namedItem("koniecObrazkow");
         }
 
     imageRef.replaceChild(newImage, imageRef.childNodes[1]);
