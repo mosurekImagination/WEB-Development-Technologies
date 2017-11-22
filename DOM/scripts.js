@@ -1,6 +1,8 @@
 //zadanie1 DONE
 
 var imagesList = document.images;
+var currentImageIndex;
+
 function useFunctionExample()
 {
     var p = document.createElement("p");
@@ -20,7 +22,7 @@ function useFunctionExample()
 //insert Before
     footer.insertBefore(footerText, footer.childNodes[0]);
 //remove child
-    footer.removeChild(footer.childNodes[1]);
+    footer.removeChild(footer.childNodes[2]);
     
 //replacing Child
     var textContainer = document.getElementById("text").parentElement;     //var textContainer = document.getElementById("textContainer");
@@ -30,15 +32,42 @@ function useFunctionExample()
      var textP = document.createElement("p");
      textP.appendChild(footerTextReplace);
     
-    textContainer.replaceChild(textP, textContainer.childNodes[0]);
+    textContainer.replaceChild(textP, textContainer.childNodes[1]);
     
 }
 
 function collectionExample()
 {
-    var imagesList = document.images;
+    document.getElementById("content").addEventListener("click", changePhoto);
+    document.getElementById("checkboxId").addEventListener("click", checkBoxListener);
 }
 
+function checkBoxListener()
+{
+        var id = document.forms.item(0).id;
+        var text = document.createTextNode("Form id: " + id);
+        var textP = document.createElement("p");
+        textP.appendChild( text);
+        textP.style="text-align:center;";
+        document.getElementById("DOM FORM").appendChild(textP);
+}
+function changePhoto()
+{
+    var newImage;
+    imageRef=document.getElementById("content");    
+    if(imagesList.length > 1 )
+        {
+            newImage = imagesList.item(imagesList.length-1);
+           // alert(imagesList.length);
+        }
+    else
+        {
+            alert(document.links.length);
+            newImage = document.links.amedItem("koniecObrazkow");
+        }
+
+    imageRef.replaceChild(newImage, imageRef.childNodes[1]);
+}
 function start()
 {
 	initializeListeners();

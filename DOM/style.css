@@ -1,3 +1,14 @@
+.form-container, .form-container > form
+{
+    width: 100%;
+}
+
+.form > input
+{
+    margin: auto;
+    width:100px; 
+    height:100px;
+}
 .img-container > img
 {
     height: 100px;
