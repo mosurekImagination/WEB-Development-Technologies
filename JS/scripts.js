@@ -46,7 +46,6 @@ function start()
     showItem();
 }
 
-
 function changeType()
 {
     if(itemType == itemsType.length - 1) itemType=0;
@@ -57,6 +56,7 @@ function changeType()
     showRandType();
     showItem();
 }
+
 function showRandType()
 {
     document.getElementById("item-type").innerHTML="<h2>Current Item Type: " + itemsType[itemType] + "</h2>";
@@ -69,8 +69,8 @@ function randType()
 
 function randItem(randT = false)
 {
-    if (randT) randType();
-    itemNo = Math.floor(Math.random()* ammountOfItems[itemType]);
+    if (randT) randType(); //generate category
+    itemNo = Math.floor(Math.random()* (ammountOfItems[itemType]+1));
 }
 
 function showItem()
@@ -119,12 +119,11 @@ function whileExample()
 {
     var first = Math.floor(Math.random() * 100);
     var second = Math.floor(Math.random() * 100);
-	var howMany = window.prompt("You cannot escape until you anser how much is: " + first + " + " + second);
+	do 
+    {var howMany = window.prompt("You cannot escape until you answer how much is: " + first + " + " + second);
+    }
 	while (howMany!=first + second)
-	{
-		howMany=window.prompt("You cannot escape until you anser how much is: " + first + " + " + second);
-	}
-	window.alert("Congratulations!")
+	window.alert("Congratulations!");
 }
 
 function forExample()
@@ -136,7 +135,7 @@ function forExample()
 		var doubleType = parseFloat(window.prompt("Type " + i + " number: "));
 		result= result + doubleType;
 	}
-	window.alert("Your result= "+ result)
+	window.alert("Your result = "+ result)
 }
 
 
