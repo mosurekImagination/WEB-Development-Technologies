@@ -77,3 +77,34 @@ header h1
   width: 100%;
 }
 
+#obszar
+{
+	flex:1;
+	text-align:center;
+	padding: 10px;
+	 -webkit-flex: 1;
+	background-color: white;
+	border:3px solid black;
+	font-size:5pt;
+}
+
+#moveBOX
+{
+	flex:1;
+	border:2px solid black;
+	width:300px;
+	height:150px;
+	margin:auto;
+}
+
+.coords
+{
+	flex:1;
+	text-align:center;
+}
+
+li
+{
+	border:1px dotted black;
+	text-align:center;
+}

@@ -13,17 +13,47 @@
  <body>
      <header id="header"></header>
 		<p style="text-align:center;">Kliknij w obrazek, aby go zmienić</p>
+		
 	<div class="flex-container">
-		<div class="flex-item" id="firstBOX" onmousedown = "changeBoxBackground(event)"> 	BOX 1	</div>
-		<div class="flex-item" id="secondBOX">	BOX 2	</div>
-		<div class="flex-item" id="thirdBOX">	BOX 3	</div>
+		<div class="flex-item" id="first"> 	BOX 1	</div>
+		<div class="flex-item" id="secondBOX">	
+			<ul>
+				<li id="arial">Arial</li>
+				<li id="italic">Italic</li>
+				<li>Comic</li>
+			</ul>
+		</div>
+		<div class="flex-item" id="thirdBOX">BOX 3</div>
 		<div class="flex-item" id="fourthBOX"> 	BOX 4	</div>
-		<div class="flex-item" id="fifthBOX">	BOX 5	</div>
-        <div class="flex-item" id="sixthBOX">	BOX 6	</div>
+		<div class="flex-item" id="fifthBOX"> BOX 5 </div>
+        <div class="flex-item" id="sixthBOX">keyCode:
+		<input type="text" size="2" onkeypress="uniCode(event)"> </div>
+		<div id = "obszar" >
+			alt - color:blue;<br>
+			ctlr - bg: red; color:white;<br>
+			shift - color: yellow;
+		</div>
 		<div class="flex-item" id="content"> <img id="image" src="image/0.jpg"/></div>
 	</div>
+		<ul>
+			<li id="arial">Arial</li>
+			<li id="italic">Italic</li>
+			<li>Comic</li>
+		</ul>
+		<div id="moveBOX"></div>
+			<p class ="coords" id="client_coords">COORDS: </p>
+			<p class ="coords" id="screen_coords">COORDS: </p>
+			
+		<form id="myForm">
+			Name:      <input id="name_in" type = "text" > <br>
+			Last-Name: <input id="last_name_in" type = "text"> <br>
+			
+			<input id="submit_button" type="submit" value="Submit">Submit</button>
+			<input id="reset_button" type="reset" value="Reset">Reset</button>
+		</form>
+			<p id="tip">help!: </p>
      <div id="textContainer"> 
-         <p id="text">Text to replace</p>
+         <p id="text"></p>
      </div>
      <footer id ="footer">
          <p>Copyright by Pawel Gluszczak 2017</p>
@@ -43,6 +73,7 @@
          <input style="display:block; width:100px; height:100px; margin: auto;" type="checkbox" id="checkboxId"/>
          </form>
      </div>
+	 
      <script>start();</script>
  </body>
  </html>

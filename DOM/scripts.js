@@ -74,6 +74,7 @@ function start()
 	initializeListeners();
     useFunctionExample();
     collectionExample();
+	addMoreListeners();
 }
 
 function initializeListeners()
@@ -81,7 +82,86 @@ function initializeListeners()
 	//document.getElementById("firstBOX").addEventListener("onmousedown", changeBoxBackground(event));
 }
 
-
-function changeBoxBackground(event){
-	alert = "fuck";
+function mouseOver(e)
+{
+	if(e.target.getAttribute( "id" ) == "obszar")
+		document.getElementById("first").innerHTML="HELLO! <3";
+	{
+		if(e.altKey) document.getElementById("first").setAttribute("style", "color: blue");
+		if(e.ctrlKey) document.getElementById("first").setAttribute("style", "background-color: red ; color:white");
+		if(e.shiftKey) document.getElementById("first").setAttribute("style", "color: yellow");
+	}
 }
+
+function mouseOut(e)
+{
+	if(e.target.getAttribute( "id" ) == "obszar")
+	{
+		document.getElementById("first").innerHTML = "Bye :(";
+	}
+}
+
+function uniCode(e)
+{
+		var x = e.which || e.keyCode;
+		document.getElementById("sixthBOX").innerHTML = "keyCODE: "+x;
+}
+
+
+function coordinates(e) 
+{
+	if(e.target.getAttribute("id") == "moveBOX")
+	{
+		var cx = e.clientX;
+		var cy = e.clientY;
+		var sx = e.screenX;
+		var sy = e.screenY;
+		var client_coor = "X: "+cx+" Y: "+cy;
+		var screen_coor = "X: "+sx+" Y: "+sy;
+		document.getElementById("client_coords").innerHTML ="COORDS:" + client_coor+ " according to the client area";
+		document.getElementById("screen_coords").innerHTML ="COORDS:" + screen_coor+ " according to the users computer screen";
+	}
+}
+
+function colorMoveBox(e)
+{
+	if(e.target.getAttribute("id") == "moveBOX")
+	{
+		//randomizer coloru ?
+		document.getElementById("moveBOX").setAttribute("style","background-color: yellow");
+	}
+}
+
+function tipText(e)
+{
+	if(e.target.getAttribute("id") == "name_in"){
+		document.getElementById("tip").innerHTML = "help!: Type name here";
+		document.getElementById("tip").setAttribute("style", "color: blue");
+	}
+	if(e.target.getAttribute("id") == "last_name_in"){
+		document.getElementById("tip").innerHTML = "help!: Type last name here";
+		document.getElementById("tip").setAttribute("style", "color: blue");
+	}
+	
+}
+
+function subbmitMessage(e)
+{
+	return confirm("ARE YOU SURE TO SUBMIT THOSE DATAS?");
+}
+function resetMessage(e)
+{
+	return confirm("ARE YOU SURE TO RESET THOSE DATAS?");
+}
+
+function addMoreListeners(){
+document.addEventListener( "mouseover", mouseOver, false );
+document.addEventListener( "mouseout", mouseOut, false );
+document.addEventListener( "mousemove" , coordinates , false);
+document.addEventListener( "mousedown" , colorMoveBox, false);
+document.getElementById("name_in").addEventListener("focus",tipText,false);
+document.getElementById("last_name_in").addEventListener("focus",tipText,false);
+document.getElementById("myForm").addEventListener("submit",subbmitMessage,false);
+document.getElementById("myForm").addEventListener("reset",resetMessage,false);
+}
+
