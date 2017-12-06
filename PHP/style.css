@@ -1,0 +1,25 @@
+.container
+{
+	padding: 2px 2px;
+    display: -webkit-flex;
+    display: flex;
+    margin: auto ;
+    width: 80%;
+    height: auto;
+    background-color: lightgreen;
+    flex: 2 100%;
+    flex-wrap: wrap;
+}
+
+.item
+{
+	flex: 1;
+	margin :5px; 
+	padding:5px;
+	background-color:yellow;
+}
+
+#resultForm1
+{
+	background-color:lightblue;
+}
