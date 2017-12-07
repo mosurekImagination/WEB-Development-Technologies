@@ -1,0 +1,47 @@
+.container
+{
+	padding: 2px 2px;
+    display: -webkit-flex;
+    display: flex;
+    margin: auto ;
+    width: 80%;
+    height: auto;
+    background-color: lightgreen;
+    flex: 2 100%;
+    flex-wrap: wrap;
+}
+
+.item
+{
+	flex: 1;
+	margin :5px; 
+	padding:5px;
+	background-color:yellow;
+}
+
+#dane
+{
+	background-color:pink;
+}
+
+
+#resultForm2
+{
+	background-color:lightblue;
+	text-align:center;
+	font-size:2em;
+}
+
+#resultForm3
+{
+	background-color:lightblue;
+	text-align:center;
+	font-style:italic;
+}
+
+#resultForm1
+{
+	background-color:lightblue;
+}
+
+
