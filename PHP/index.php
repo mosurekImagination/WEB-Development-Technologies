@@ -11,6 +11,7 @@
 </head>
 
 <body>
+<h1 style="color:blue; text-align:center;">HERE IS SOME PHP WORK EXAMPLE</h1>
 <div class ="container">
 	<div class= "item">box 1</div>
 	<div class= "item">box 2</div>
@@ -29,10 +30,26 @@
 		Wpisz tutaj słowo kluczowe:
 			<input type="text" name="kluczowe" />
 		</div>
-	
 	</form>
-	
+</div>
+
+<div class ="container">
+	<div class="item" style="margin:auto;">
+	<form action="arytmetyka.php" method="post">
+		<input type="text" name="liczba1" style="width:40%";/> 
+			<select name= "dzialanie" style="width:10%;">
+				<option>+</option>
+				<option>-</option>
+				<option>/</option>
+				<option>*</option>
+			</select>
+		<input type="text" name="liczba2" style="width:40%";/>
+		<input type="submit" value="policz"/>
+	</form>
 	</div>
+</div>
+
+
 </div>
 
 

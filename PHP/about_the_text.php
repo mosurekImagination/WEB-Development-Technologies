@@ -11,16 +11,16 @@
 </head>
 
 <body>
-<div class = "container">
-	
-</div>
 <div class ="container">
 	<div class= "item" id="resultForm1">
 <?php
 
 $zdanie = $_POST['zdanie'];
 $klucz = $_POST['kluczowe'];
-$licznik = 0;
+$licznik = "0";
+
+echo "Zdanie które napisałeś to: <b>' $zdanie '</b> a tu pare informacji o nim: :) <br>";
+
 
 if(preg_match("/$klucz/", $zdanie))
 {
@@ -46,9 +46,13 @@ if(preg_match("/$klucz$/",$zdanie))// jeżeli klucz jest ostatnim słowem
 	echo "Słowo <b> $klucz </b> NIE jest ostatnim słowem we wpisanym zdaniu <br>";
 }
 
-preg_match("/$klucz/", $zdanie, $match);
-preg_replace("/$match/", "KLUCZ" , $zdanie);
-echo "Zmienione zdanie: $zdanie";
+while(preg_match("/\b([[:alpha:]]+)\b/", $zdanie, $match))
+{
+	$licznik = $licznik + "1";
+	$zdanie = preg_replace("/" . $match[ 1 ] . "/" , "", $zdanie);
+}
+echo "Zdanie ma: <b> $licznik </b> różnych słów <br>";
+
 
 
 	
