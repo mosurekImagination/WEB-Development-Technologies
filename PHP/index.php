@@ -46,6 +46,15 @@
 		<input type="text" name="liczba2" style="width:40%";/>
 		<input type="submit" value="policz"/>
 	</form>
+        
+    	<form action="typeoperations.php" method="post">
+		<div class = "item input">
+		Podaj promień koła:
+			<input type="text" name="promien" size="50px"/>
+			<input type="submit" value="Oblicz różne rzeczy">
+		</div>
+
+	</form>
 	</div>
 </div>
 
