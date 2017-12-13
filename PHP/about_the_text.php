@@ -60,7 +60,13 @@ echo "Zdanie ma: <b> $licznik </b> różnych słów <br>";
 	</div>
 </div>
 
-
+<div class="container">
+	<div class ="item">
+		<a href="index.php">
+		<input type="button" value="Wroc na strone główną" style="width:100%;"/>
+		</a>
+	</div>
+</div>
 
 </body>
 

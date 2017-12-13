@@ -19,11 +19,24 @@
 	background-color:yellow;
 }
 
+#dane
+{
+	background-color:pink;
+}
+
+
 #resultForm2
 {
 	background-color:lightblue;
 	text-align:center;
 	font-size:2em;
+}
+
+#resultForm3
+{
+	background-color:lightblue;
+	text-align:center;
+	font-style:italic;
 }
 
 #resultForm1

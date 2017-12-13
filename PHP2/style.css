@@ -1,0 +1,73 @@
+nav
+{
+	height: 100px;
+	background-color: rgba(76, 98, 255, 0.6);
+	text-align: right;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+nav a
+{
+	text-decoration: none;
+}
+nav > ul
+{
+	height: inherit;
+	list-style-type: none;
+}
+
+nav > ul > a
+{
+	color: black;
+	font-size: 2em;
+	display: inline-block;
+	height: inherit;
+	line-height: 100px;
+	padding: 0 50px 0 50px;
+}
+
+nav > ul > a:hover
+{
+	background-color: rgba(76, 98, 255, 0.9);
+}
+
+body
+{
+	width: 80%;
+	margin: auto;
+}
+
+.content
+{
+	display: block;
+	width: 80%;
+	display: block;
+}
+
+.content p
+{
+	font-size: 1.3em;
+}
+
+aside
+{
+	margin-left: 5%;
+	float: right;
+	width: 15%;
+}
+
+
+aside > form > select
+{
+	width: 60%;
+}
+
+aside input
+{
+	font-size: 1.2em;
+	width: 30%;
+	display: block;
+	margin: 30px auto 0px auto;
+}
