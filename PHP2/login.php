@@ -8,12 +8,12 @@
 <body>
 <?php include("header.php"); ?>
     <div class="login">
-    <form action="loginAction.php"  method="post">
-    <h2>Login</h2>
-    <input type="text" name="login"/>
-    <h2>Hasło</h2>
-    <input type="text" name="password"/>
-    <input type="submit" value="Zaloguj"/>
-    </form>
+        <form action="loginAction.php"  method="post">
+            <h2>Login</h2>
+            <input type="text" name="login"/>
+            <h2>Hasło</h2>
+            <input type="text" name="password"/>
+            <input type="submit" value="Zaloguj"/>
+        </form>
     </div>
 </body>

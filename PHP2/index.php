@@ -4,11 +4,10 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="description" content="Main Page"/>
-    <meta name="keywords" content="main, page"/>
+    <meta name="keywords" content="mains, page"/>
     <meta name="author" content="Tomek"/>
 	<title>Bardzo fajna strona</title>
 
-	<?php include("applyCookieTheme.php"); ?>
 </head>
 <body>
 <?php include("header.php"); ?>
