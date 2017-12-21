@@ -18,7 +18,7 @@
         $errorMsg;
         $query;
         if($correctInput) {
-            if(!preg_match('/^[A-Z][0-9]{5,20}&/', $login))
+            if(preg_match('/^([a-z|A-Z|0-9]{5,20})$/', $login) == FALSE)
              {
                 $correctInput = false; 
                 $errorMsg = "Nieprawidlowy login";
@@ -36,6 +36,8 @@
         {
             $query = "UPDATE Users SET login = '$login', password = '$password', nazwisko = '$nazwisko',
                 imie = '$imie', adres = '$adres', miasto = '$miasto' WHERE id =".$_POST["id"].';';
+			$_SESSION['login'] = $login;
+			$_SESSION['haslo'] = $password;
         }
        // print($query);
         mysqli_query($db, $query) or die('Błąd przy zapisywaniu danych');

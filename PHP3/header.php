@@ -12,9 +12,15 @@ if(!empty($_SESSION["counter"]))
             <a href="databasePreview.php"><li>Baza</li></a>  
             <a href="logout.php"><li>Wyloguj</li></a>   
     </nav>';
-    echo "Wyswietlen podstron:".++$_SESSION['counter'].
-    " <p>Login:".$_SESSION['login'].
-    "</p><p>Haslo:".$_SESSION['haslo']."</p>";
+	
+	
+	foreach($_SESSION as $name => $value){
+		$data = $name;
+		$$data = $value;
+		echo '<p>'.$data.' : '.'<span style="font-weight:bold;">'.$$data.'</span></p>';
+	}
+	$_SESSION['counter']++;
+	
 }
 else
 {

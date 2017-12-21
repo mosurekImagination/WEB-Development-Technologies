@@ -42,6 +42,7 @@
             }
             ?>
         </table>
+		
             <h1>Table Friendships: </h1>
             <table>
                 <tr>

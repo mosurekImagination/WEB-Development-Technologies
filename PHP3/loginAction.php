@@ -13,7 +13,15 @@ try{
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
     mysqli_set_charset($db,"utf8");
-    $query = "SELECT login FROM Users WHERE login ='".$_POST['login']."' AND password ='".$_POST['password']."'";
+	$login = quotemeta($_POST['login']);
+	$password = quotemeta($_POST['password']);
+	
+	
+    $query = "SELECT login FROM Users WHERE login ='".
+	mysqli_real_escape_string($db,$login).
+	"' AND password ='".
+	mysqli_real_escape_string($db,$password).
+	"'";
     mysqli_query($db, $query) or die('Błąd przy pobieraniu danych');
     $result = mysqli_query($db, $query);
     $row = mysqli_fetch_array($result);
@@ -22,8 +30,8 @@ try{
         {
             include("header.php"); 
             $_SESSION['counter'] = 1;
-            $_SESSION['login'] = $_POST['login'];
-            $_SESSION['haslo'] = $_POST['password'];
+            $_SESSION['login'] = $login;
+            $_SESSION['haslo'] = $password;
             echo '<h1>Zalogowano</h1>';
             echo  'wyswietlen podstron:'.$_SESSION['counter'];
         }
