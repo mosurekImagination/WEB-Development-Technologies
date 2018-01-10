@@ -27,7 +27,7 @@
             <tr>
                 <td class="auto-style2">imię</td>
                 <td>
-                    <asp:TextBox ID="tbxName" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbxName" runat="server" BackColor="#FF0066"></asp:TextBox>
                     <br />
                     <asp:RequiredFieldValidator ID="nameRequiredFieldValidator" runat="server" ControlToValidate="tbxName" Display="Dynamic" ErrorMessage="Pole puste. Proszę wpisać dane" ForeColor="Maroon"></asp:RequiredFieldValidator>
                 </td>
